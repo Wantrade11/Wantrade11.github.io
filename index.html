@@ -1,25 +1,162 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kurni</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arsip PDAM Balangan</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+    }
+
+    header {
+        align-items: center;
+        text-align: center;
+        padding: 20px 10px;
+        background-color: #e6f0f5;
+    }
+
+    .navbar {
+        padding: 10px 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    a {
+        text-decoration: none;
+        color: #333;
+
+    }
+
+    .kiri {
+        display: flex;
+        gap: 15px;
+    }
+
+    .kanan {
+        font-size: 20px;      
+    }
+
+    .setting {
+        background-color: transparent;
+        border: 2px solid#333;
+        padding: 5px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    .isi {
+        padding: 150px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .cari {
+        display: flex;
+        justify-content: center;
+        margin: 30px auto;
+        max-width: 500px;
+    }
+
+    .cari input {
+        flex: 1;
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid #0077b6;
+        border-right: none;
+        border-radius: 8px 0 0 8px;
+    }
+
+    .cari button {
+        padding: 10px 15px;
+        border: 2px;
+        background-color: #0077b6;
+        color: white;
+        border-radius: 0 8px 8px 0;
+        cursor: pointer;
+    }
+
+    .file {
+        text-align: center;
+        margin: 40px 20px;
+    }
+
+    .dokumen {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 50px;
+    }
+
+    .tambahfile {
+        background-color: white;
+        border: 1px solid #ccc;
+        padding: 20px;
+        width: 180px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .tambahfile:hover {
+        background-color: #35344a15;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .setting:hover {
+        background-color: #0077b6;
+        color: #ffffff;
+    }
 </style>
+
 <body>
-    <nav class="navbar">
-        <div class="left">
-            <a href="#home" class="nav-item">HOME</a>
-            <a href="#Upload" class="nav-item">UPLOAD</a>
-            <a href="#kategori" class="nav-item">KATEGORI</a>         
+    <header>
+        <nav class="navbar">
+            <div class="kiri">
+                <a href="#">HOME</a>
+                <a href="#">UPLOAD</a>
+                <a href="#">KATEGORI</a>
+            </div>
+            <div class="kanan">
+                <button class="setting">SETTING</button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="isi">
+        <h1>ARSIP PDAM BALANGAN</h1>
+        <div class="cari">
+            <input type="text" placeholder="Cari dokumen...">
+            <button>🔍</button>
         </div>
-        <div class="right">
-            <button class="setting">SETTING</button>
-        </div>
-    </nav>
+
+        <section class="file">
+            <h2>Dokumen yang baru ditambahkan</h2>
+            <div class="dokumen">
+                <div class="tambahfile">📄 Word</div>
+                <div class="tambahfile">📄 Excel</div>
+                <div class="tambahfile">📄 PDF</div>
+            </div>
+        </section>
+    </div>
 </body>
 
 </html>
